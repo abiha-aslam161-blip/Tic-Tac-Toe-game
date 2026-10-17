@@ -1,0 +1,128 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #d8b4fe, #93c5fd);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .game {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 25px #0002;
+            width: 350px;
+            max-width: 95%;
+        }
+
+        h1 {
+            color: #5b21b6;
+            margin-top: 0;
+        }
+
+        #status {
+            font-size: 18px;
+            font-weight: bold;
+            color: #374151;
+            margin: 20px 0;
+            min-height: 24px;
+        }
+
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .cell {
+            height: 85px;
+            background: #ede9fe;
+            border: none;
+            border-radius: 12px;
+            font-size: 38px;
+            font-weight: bold;
+            color: #6d28d9;
+            cursor: pointer;
+        }
+
+        .cell:hover {
+            background: #ddd6fe;
+        }
+
+        .cell:disabled {
+            cursor: not-allowed;
+            opacity: 1;
+        }
+
+        .restart {
+            background: #7c3aed;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .restart:hover {
+            background: #5b21b6;
+        }
+
+        .footer {
+            color: #6b7280;
+            font-size: 13px;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="game">
+        <h1>❌ Tic-Tac-Toe ⭕</h1>
+
+        <p id="status">Player X's turn</p>
+
+        <div class="board">
+            <button class="cell" onclick="makeMove(0)"></button>
+            <button class="cell" onclick="makeMove(1)"></button>
+            <button class="cell" onclick="makeMove(2)"></button>
+
+            <button class="cell" onclick="makeMove(3)"></button>
+            <button class="cell" onclick="makeMove(4)"></button>
+            <button class="cell" onclick="makeMove(5)"></button>
+
+            <button class="cell" onclick="makeMove(6)"></button>
+            <button class="cell" onclick="makeMove(7)"></button>
+            <button class="cell" onclick="makeMove(8)"></button>
+        </div>
+
+        <button class="restart" onclick="restartGame()">
+            🔄 Restart Game
+        </button>
+
+        <p class="footer">Two players • One winner!</p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
